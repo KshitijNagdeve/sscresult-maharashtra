@@ -24,4 +24,3 @@ app.use('/students', resultRoutes)
 app.listen(11400, () => {
     console.log("Server is running at http://localhost:11400")
 })
-
