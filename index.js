@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 import resultRoutes from './routes/resultRoutes.js'
 import path from 'path'
 import cors from 'cors'
+const PORT = process.env.PORT || 11400;
+
 
 const app = express()
 app.use(cors())
@@ -17,10 +19,9 @@ app.get('/', (req, res) => {
 
 mongoose.connect('mongodb://127.0.0.1:27017/resultDB')
     .then(() => console.log("MongoDB Connected"))
-    .catch(error => console.log(error))
 
 app.use('/students', resultRoutes)
 
-app.listen(11400, () => {
-    console.log("Server is running at http://localhost:11400")
+app.listen(PORT, () => {
+    console.log(`Server is running at http://localhost:${PORT}`)
 })
