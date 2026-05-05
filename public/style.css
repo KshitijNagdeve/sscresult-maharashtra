@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 4.2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(81, 168, 177);
+    ;
+}
+
+.title {
+    text-align: center;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
+    height: 90%;
+    width: max-content;
+    margin-top: 0.90rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.logo {
+    align-self: center;
+    height: 60%;
+    width: 25%;
+    border-radius: 50%;
+    margin-left: 0.30rem;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background-color: #e9f7ef;;
+}
+
+.title2 {
+    margin-top: 1.5rem;
+    height: max-content;
+    width: 80%;
+}
+
+.subtitle {
+    border-radius: 0.375rem;
+    height: max-content;
+    width: 100%;
+    font-size: 1.40rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+form {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+form input {
+    width: 80%;
+    color: rgb(17, 24, 39);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-bottom: 0.375rem;
+    background-color: transparent;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    border-radius: 0.5rem;
+}
+
+input {
+    transition: all 0.3s ease;
+}
+
+/* When user clicks input */
+input:focus {
+    transform: scale(1.04);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#seat {
+    margin-bottom: 0.2rem;
+    height: 2rem;
+}
+
+#mname {
+    height: 2rem;
+    margin-top: 0.2rem;
+}
+
+#viewresult {
+    text-align: center;
+    height: max-content;
+    width: 90%;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    margin-top: 0.4rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: rgb(55, 119, 131);
+    cursor: pointer;
+    text-transform: none;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgb(229, 231, 235);
+    box-sizing: border-box;
+}
+
+.Notebox {
+    height: max-content;
+    width: 90%;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(75, 85, 99);
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    text-align: center;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+p {
+    height: max-content;
+    width: 90%;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    color: rgb(107, 114, 128);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+/* ✨ Input focus animation */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+    /* Slight zoom */
+    transform: scale(1.03);
+}
+
+/* Button */
+/* 🎯 Hover effect */
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 👇 Click (active) effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Result box animation */
+#result {
+    z-index: 2;
+    margin-top: -270px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #e9f7ef;
+    /* Fade-in animation */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container */
+.marksheet {
+    width: 90%;
+    max-width: 50rem;
+    /* ~800px but responsive */
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 0.125rem solid #000;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Titles */
+.board-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.exam-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* Info section */
+.info {
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+table th,
+table td {
+    border: 0.0625rem solid #000;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Summary */
+.summary {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 600px) {
+    .marksheet {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .board-title {
+        font-size: 0.85rem;
+    }
+
+    .exam-title {
+        font-size: 1rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .info {
+        font-size: 0.85rem;
+    }
+
+    .summary {
+        font-size: 0.85rem;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.board-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    /* makes it round */
+    border-radius: 50%;
+    /* professional look */
+    border: 2px solid #333;
+    padding: 3px;
+    background: white;
+    /* slight shadow for depth */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
