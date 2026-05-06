@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 import Result from "./models/Result.js";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect("mongodb://127.0.0.1:27017/resultDB")
+mongoose.connect(process.env.MONGO_URI)
   .then(async () => {
     console.log("Connected");
 

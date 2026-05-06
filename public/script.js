@@ -9,7 +9,8 @@ document.querySelector("#resultForm").addEventListener("submit", async (e) => {
     const mname = document.querySelector("#mname").value.trim()
 
     try {
-        const response = await fetch('http://127.0.0.1:11400/students/result', {
+    const BASE_URL = "https://sscresult-maharashtra.onrender.com";
+        const response = await fetch(`${BASE_URL}/students/result`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
