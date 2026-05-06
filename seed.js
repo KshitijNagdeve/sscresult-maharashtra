@@ -25,7 +25,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/resultDB")
       },
 
       {
-        seat: "J045829",
+        seat: "J045824",
         mname: "Varsha Sanjay Chaudhari",
         name: "Sanket Sanjay Chaudhari",
         division: "A",
