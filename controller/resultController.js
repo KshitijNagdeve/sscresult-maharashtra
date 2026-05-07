@@ -2,8 +2,10 @@ import Result from '../models/Result.js';
 
 export const getResult = async (req, res) => {
     try {
+
         const { seat, mname } = req.body;
 
+        // Check empty fields
         if (!seat || !mname) {
             return res.status(400).json({
                 success: false,
@@ -11,29 +13,21 @@ export const getResult = async (req, res) => {
             });
         }
 
+        // Find result using seat number + partial mother name
         const result = await Result.findOne({
             seat: seat,
-            mname: { $regex: mname, $options: "i" }
+            mname: { $regex: "^" + mname, $options: "i" }
         });
+
+        // If result not found
         if (!result) {
             return res.status(404).json({
                 success: false,
-                message: "Invalid seat number"
+                message: "Invalid seat number or mother name"
             });
         }
 
-        // FIXED comparison
-        if (
-            result.mname.toLowerCase().trim() !==
-            mname.toLowerCase().trim()
-        ) {
-            return res.status(400).json({
-                success: false,
-                message: "Incorrect mother name"
-            });
-        }
-
-        // SEND FULL DATA (VERY IMPORTANT)
+        // Send result data
         res.status(200).json({
             success: true,
             data: {
@@ -41,7 +35,7 @@ export const getResult = async (req, res) => {
                 seat: result.seat,
                 mname: result.mname,
                 division: result.division,
-                subjects: result.subjects,   // 🔥 FIX
+                subjects: result.subjects,
                 total: result.total,
                 percentage: result.percentage,
                 status: result.status
@@ -49,9 +43,11 @@ export const getResult = async (req, res) => {
         });
 
     } catch (err) {
+
         res.status(500).json({
             success: false,
             message: err.message
         });
+
     }
 };
