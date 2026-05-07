@@ -49,7 +49,7 @@ header {
     padding-top: 4rem;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 68vh;
     width: 100%;
     align-items: center;
     background-color: #e9f7ef;;
@@ -194,9 +194,8 @@ button:active {
 }
 
 /* Result box animation */
-#result {
-    z-index: 2;
-    margin-top: -270px;
+#result{
+    margin-top: -37px;
     padding: 15px;
     border-radius: 5px;
     background: #e9f7ef;
