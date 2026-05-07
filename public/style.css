@@ -217,106 +217,44 @@ button:active {
     }
 }
 
-/* Container */
 .marksheet {
-    width: 90%;
-    max-width: 50rem;
-    /* ~800px but responsive */
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border: 0.125rem solid #000;
+    width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #000;
     background: #fff;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
 }
 
-/* Titles */
 .board-title {
     text-align: center;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .exam-title {
     text-align: center;
-    margin: 1rem 0;
-    font-size: 1.1rem;
+    margin: 10px 0;
 }
 
-/* Info section */
 .info {
-    margin: 1rem 0;
-    line-height: 1.6;
-    font-size: 0.9rem;
+    margin: 15px 0;
+    line-height: 1.8;
 }
 
-/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
-table th,
-table td {
-    border: 0.0625rem solid #000;
-    padding: 0.5rem;
+table th, table td {
+    border: 1px solid #000;
+    padding: 8px;
     text-align: left;
 }
 
-/* Summary */
 .summary {
-    margin-top: 1rem;
+    margin-top: 15px;
     font-weight: bold;
-    font-size: 0.95rem;
-}
-
-/* 📱 Mobile responsive */
-@media (max-width: 600px) {
-    .marksheet {
-        width: 95%;
-        padding: 1rem;
-    }
-
-    .board-title {
-        font-size: 0.85rem;
-    }
-
-    .exam-title {
-        font-size: 1rem;
-    }
-
-    table th,
-    table td {
-        padding: 0.4rem;
-        font-size: 0.8rem;
-    }
-
-    .info {
-        font-size: 0.85rem;
-    }
-
-    .summary {
-        font-size: 0.85rem;
-    }
-}
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.board-logo {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    /* makes it round */
-    border-radius: 50%;
-    /* professional look */
-    border: 2px solid #333;
-    padding: 3px;
-    background: white;
-    /* slight shadow for depth */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
