@@ -11,8 +11,10 @@ export const getResult = async (req, res) => {
             });
         }
 
-        const result = await Result.findOne({ seat });
-
+        const result = await Result.findOne({
+            seat: seat,
+            mname: { $regex: mname, $options: "i" }
+        });
         if (!result) {
             return res.status(404).json({
                 success: false,
